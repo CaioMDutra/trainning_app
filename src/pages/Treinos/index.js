@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, SafeAreaView, Text, StyleSheet, FlatList, View} from 'react-native';
+import { Image, SafeAreaView, Text, StyleSheet, FlatList, View, TouchableOpacity} from 'react-native';
 
 import * as Animatable from 'react-native-animatable'
 
@@ -48,12 +48,12 @@ const treinos = [
 },
 ];
 const oneTreino = ({item}) => (
-    <View style={styles.item}>
+    <TouchableOpacity style={styles.item}>
         <View style={styles.avatarCounteiner}>
             <Image source={item.image} style={styles.avatar}/>
         </View>
         <Text style={styles.name}>{item.name}</Text>
-    </View>
+    </TouchableOpacity>
     
 )
 
